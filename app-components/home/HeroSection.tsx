@@ -10,7 +10,7 @@ const HeroSection = () => {
             <h1 className="text-center md:text-left text-4xl leading-10 md:leading-16 md:text-7xl md:leading-20 font-bold max-w-xl text-slate-900">
                 12-Hours Fresh
                 <br/>
-                <span className='text-blue-500'>Confidfence</span> Challenge.
+                <span className='text-blue-500'>Confidence</span> Challenge.
             </h1>
             <p className="text-center md:text-left text-sm text-slate-700 max-w-lg mt-2">
                 Unlock smarter workflows with AI tools designed to boost productivity, simplify tasks and help you do more with less effort.
