@@ -14,11 +14,11 @@ const Footer = () => {
                 </div>
                 <div className="flex-1 flex items-start md:justify-end gap-20 md:gap-40">
                     <div>
-                        <h2 className="font-semibold mb-5">Company</h2>
+                        <h2 className="font-semibold mb-5">Social Media</h2>
                         <ul className="text-sm space-y-2">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">TikTok</a></li>
                             <li><a href="#">Privacy policy</a></li>
                         </ul>
                     </div>

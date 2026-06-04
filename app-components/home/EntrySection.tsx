@@ -6,6 +6,7 @@ import Container from "../global/Container";
 
 const EntrySection = () => {
   return (
+    <section id="leaderboard">
     <Container className="flex flex-col gap-6 py-12">
       <span className="text-xs border rounded-lg font-semibold w-28 text-center">
         LEADERBOARD
@@ -39,6 +40,7 @@ const EntrySection = () => {
         </div>
 
     </Container>
+    </section>
   );
 };
 

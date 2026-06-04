@@ -5,7 +5,7 @@ import { Hash, PaintbrushVertical, Sparkles, Upload } from "lucide-react";
 
 const HowItWorks = () => {
   return (
-    <section className=" py-26 shadow-lg">
+    <section id="how-it-works" className="py-26 shadow-lg">
       <Container>
         <SectionHeadline 
         topic="HOW IT WORKS" 

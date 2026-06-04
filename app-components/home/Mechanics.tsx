@@ -7,7 +7,7 @@ import { Camera, Hash, MessageSquareMore } from "lucide-react";
 
 const Mechanics = () => {
   return (
-    <main className="py-20 w-full bg-blue-50">
+    <main id="get-started" className="py-20 w-full bg-blue-50">
       <Container className="grid grid-cols-1 md:grid-cols-12 gap-6">
         <aside className="col-span-1 md:col-span-7">
           <div className="flex flex-col gap-4 mb-10">

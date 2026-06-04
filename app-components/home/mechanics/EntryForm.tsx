@@ -1,6 +1,9 @@
-import { LuUpload } from "react-icons/lu";
+import FormStage from "../entries/forms/FormStage";
+
 
 const EntryForm = () => {
+
+
   return (
     <section className="flex flex-col gap-4">
       <div className="space-y-3">
@@ -14,13 +17,7 @@ const EntryForm = () => {
             <div className="p-2 bg-blue-200 rounded-2xl text-center col-span-1 font-semibold">Evening</div>
       </nav>
 
-
-    <div className="w-full flex-col gap-3 justify-center items-center text-center border border-gray-400 border-dashed py-6 rounded-2xl">
-            <LuUpload className="w-5 h-5 mx-auto"/>
-            <h3 className="text-lg font-bold">Drop a photo</h3>
-            <span className="text-sm text-gray-500">JPG or PNG max 10mb 9:16 recommended</span>
-    </div>
-
+    <FormStage/>
 
     </section>
   );
