@@ -26,7 +26,7 @@ const EntrySection = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {entryData.map((entry) => {
             return (
-                <EntryCard key={entry.username} image={entry.image} username={entry.username} caption={entry.caption} likes={entry.likes} views={entry.views} score={entry.score}/>
+                <EntryCard key={entry.id} id={entry.id} image={entry.image} username={entry.username} caption={entry.caption} likes={entry.likes} views={entry.views} score={entry.score}/>
             )
         })}
       </div>
@@ -34,7 +34,7 @@ const EntrySection = () => {
         <div className="w-full rounded-4xl shadow-lg my-12">
             {entryData.map((list) => {
                 return (
-                    <CardList key={list.username} image={list.image} username={list.username} caption={list.caption} likes={list.likes} views={list.views} score={list.score}/>
+                    <CardList key={list.id} id={list.id} image={list.image} username={list.username} caption={list.caption} likes={list.likes} views={list.views} score={list.score}/>
                 )
             })}
         </div>

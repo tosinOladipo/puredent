@@ -4,7 +4,7 @@ import { EntryType } from "@/utils/types";
 import View from "@/app-components/global/View";
 import Like from "@/app-components/global/Like";
 
-const CardList = ({image, caption, username, views, likes, score}: EntryType) => {
+const CardList = ({id,  image, caption, username, views, likes, score}: EntryType) => {
   return (
     <div className="py-6 p-6 w-full grid grid-cols-2">
       <div className="col-span-1 flex gap-3">

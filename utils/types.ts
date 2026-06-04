@@ -1,4 +1,5 @@
 export type EntryType = {
+  id: string;
   image: string;
   username: string;
   caption: string;

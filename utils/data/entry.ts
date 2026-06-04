@@ -1,5 +1,6 @@
 
 type EntryType = {
+  id: string;
   image: string;
   username: string;
   caption: string;
@@ -11,6 +12,7 @@ type EntryType = {
 const entryData: EntryType[] = [
   
   {
+    id: 'adc123',
     image: '/img/face/face-1.png',
     username: '@loverboy',
     caption: 'This is a text caption',
@@ -20,6 +22,7 @@ const entryData: EntryType[] = [
   },
 
   {
+    id: 'adc124',
     image: '/img/face/face-2.png',
     username: '@gemgirl',
     caption: 'This is a text caption',
@@ -29,6 +32,7 @@ const entryData: EntryType[] = [
   },
 
   {
+    id: 'adc125',
     image: '/img/face/face-3.png',
     username: '@saucekid',
     caption: 'This is a text caption',
