@@ -5,9 +5,12 @@ import * as z from "zod";
 import { CustomFormTextArea } from "@/components/form-components/FormComponents";
 import { createAndEditCaptionSchema, CreateAndEditCaptionType } from '@/utils/schema';
 import { Button } from "@/components/ui/button";
+import { useDispatch } from "react-redux";
+import { setCaption } from "@/app/store/slices/captionSlice";
+import { formStage } from "@/app/store/slices/stageSlice";
 
 const CaptionForm = () => {
-
+  const dispatch = useDispatch();
 
     // 1. Define your form.
       const form = useForm<z.infer<typeof createAndEditCaptionSchema>>({
@@ -18,7 +21,8 @@ const CaptionForm = () => {
       });
     
       const onSubmit = async (values: CreateAndEditCaptionType) => {
-        
+        dispatch(setCaption(values));
+        dispatch(formStage());
       };
 
   return (

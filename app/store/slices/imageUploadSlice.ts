@@ -15,9 +15,8 @@ export const uploadSlice = createSlice({
   // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
-    upload: (state, action: PayloadAction<UploadType>) => {
-      state.imgUpload = action.payload.imgUpload;
-      localStorage.setItem('imgUpload', JSON.stringify(action.payload.imgUpload));
+    upload: (state, action: PayloadAction<string>) => {
+      state.imgUpload = action.payload;
     },
   },
 });

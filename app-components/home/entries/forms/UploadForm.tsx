@@ -57,7 +57,7 @@ const UploadForm = () => {
           setStatus("idle");
           return;
         }
-
+        console.log("Server response:", res.imageUrl);
         dispatch(upload(res.imageUrl));
         dispatch(captionStage());
         setStatus("done"); // ✅ Completed

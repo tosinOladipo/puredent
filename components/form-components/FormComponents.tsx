@@ -17,10 +17,10 @@ type OptionType = {
   name: string;
 };
 
-type CustomFormFieldProps = {
-  name: string;
+type CustomFormFieldProps<T extends FieldValues> = {
+  name: Path<T>;
   labelText?: string;
-  control: Control<any>;
+  control: Control<T>;
   placeholder?: string;
   className?: string;
 };
@@ -46,20 +46,20 @@ type CustomSelectProps = {
 
 
 //Custom Text Input Field
-export function CustomFormField({
+export function CustomFormField<T extends FieldValues>({
   name,
   control,
   labelText,
   placeholder,
   className,
-}: CustomFormFieldProps) {
+}: CustomFormFieldProps<T>) {
   return (
     <Controller
       name={name}
       control={control}
       render={({ field, fieldState }) => (
         <Field data-invalid={fieldState.invalid}>
-          <FieldLabel htmlFor="form-rhf-demo-title">{labelText}</FieldLabel>
+          <FieldLabel htmlFor="form-rhf-demo-title" className="text-xs text-gray-500">{labelText}</FieldLabel>
           <Input
             {...field}
             id="form-rhf-demo-title"
@@ -76,13 +76,45 @@ export function CustomFormField({
 }
 
 
+//Disabled Custom Text Input Field
+export function CustomFormDisabledField<T extends FieldValues>({
+  name,
+  control,
+  labelText,
+  placeholder,
+  className,
+}: CustomFormFieldProps<T>) {
+  return (
+    <Controller
+      name={name}
+      control={control}
+      render={({ field, fieldState }) => (
+        <Field data-invalid={fieldState.invalid}>
+          <FieldLabel htmlFor="form-rhf-demo-title" className="text-xs text-gray-500">{labelText}</FieldLabel>
+          <Input
+            {...field}
+            id="form-rhf-demo-title"
+            aria-invalid={fieldState.invalid}
+            placeholder={placeholder}
+            autoComplete="off"
+            className={cn(className)}
+            disabled
+          />
+          {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
+        </Field>
+      )}
+    />
+  );
+}
+
+
 //Custom Password Field
-export function CustomFormPasswordField({
+export function CustomFormPasswordField<T extends FieldValues>({
   name,
   control,
   labelText,
   className,
-}: CustomFormFieldProps) {
+}: CustomFormFieldProps<T>) {
   return (
     <Controller
       name={name}
@@ -137,47 +169,7 @@ export function CustomFormTextArea<T extends FieldValues>({
 }
 
 
-//Custom Image Input Field
-export function CustomImageUploadField({
-  name,
-  control,
-  labelText,
-  placeholder,
-  className,
-}: CustomFormFieldProps) {
-  return (
-    <Controller
-  name={name}
-  control={control}
-  render={({ field, fieldState }) => (
-    <Field data-invalid={fieldState.invalid}>
-      <FieldLabel htmlFor="image-upload">{labelText}</FieldLabel>
 
-      <label
-        htmlFor="image-upload"
-        className="w-full py-6 border flex flex-col items-center justify-center cursor-pointer"
-      >
-        <Image />
-        <span>{labelText}</span>
-
-        <Input
-          id="image-upload"
-          aria-invalid={fieldState.invalid}
-          placeholder={placeholder}
-          autoComplete="off"
-          className={cn(className)}
-          type="file"
-          hidden
-          onChange={(e) => field.onChange(e.target.files?.[0])}
-        />
-      </label>
-
-      {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
-    </Field>
-  )}
-/>
-  );
-}
 
 
 

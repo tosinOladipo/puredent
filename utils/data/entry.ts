@@ -14,7 +14,17 @@ const entryData: EntryType[] = [
   {
     id: 'adc123',
     image: '/img/face/face-1.png',
-    username: '@loverboy',
+    username: 'access.tosin',
+    caption: 'This is a text caption',
+    likes: 34,
+    views: 29,
+    score: 56,
+  },
+
+  {
+    id: 'acb123',
+    image: '/img/face/face-3.png',
+    username: 'access.tosin',
     caption: 'This is a text caption',
     likes: 34,
     views: 29,
@@ -24,7 +34,7 @@ const entryData: EntryType[] = [
   {
     id: 'adc124',
     image: '/img/face/face-2.png',
-    username: '@gemgirl',
+    username: 'gemgirl',
     caption: 'This is a text caption',
     likes: 34,
     views: 29,
@@ -34,7 +44,17 @@ const entryData: EntryType[] = [
   {
     id: 'adc125',
     image: '/img/face/face-3.png',
-    username: '@saucekid',
+    username: 'saucekid',
+    caption: 'This is a text caption',
+    likes: 34,
+    views: 29,
+    score: 56,
+  },
+
+  {
+    id: 'adc126',
+    image: '/img/face/face-2.png',
+    username: 'gemgirl',
     caption: 'This is a text caption',
     likes: 34,
     views: 29,

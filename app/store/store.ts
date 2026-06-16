@@ -1,11 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit'
 import imgUploadReducer from '@/app/store/slices/imageUploadSlice'
 import stageReducer from '@/app/store/slices/stageSlice'
+import userReducer from '@/app/store/slices/userSlice'
+import captionReducer from '@/app/store/slices/captionSlice'
+import entryReducer from '@/app/store/slices/entrySlice'
 
 export const store = configureStore({
   reducer: {
     imgUpload: imgUploadReducer,
-    stage: stageReducer
+    stage: stageReducer,
+    user: userReducer,
+    caption: captionReducer,
+    entries: entryReducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({ serializableCheck: false }),

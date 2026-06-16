@@ -8,25 +8,24 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { EntryType } from "@/utils/types";
+import { UploadType } from "@/utils/types";
 import { Eye, Heart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const EntryCard = ({
   id,
-  image,
+  imageUrl,
   username,
   caption,
-  likes,
-  views,
-  score,
-}: EntryType) => {
+  smilePoint,
+  totalPoint,
+}: UploadType) => {
   return (
-    <Link href={`/entries/${id}`}>
+    <Link href={`/entries/${username}`} className="col-span-1">
       <Card className="col-span-1 shadow-lg">
         <Image
-          src={image}
+          src={imageUrl}
           alt="face-image"
           width={200}
           height={400}
@@ -38,10 +37,10 @@ const EntryCard = ({
         </CardHeader>
         <CardFooter className="flex justify-between">
           <div className="flex gap-3">
-            <Like likes={likes} />
-            <View views={views} />
+            <Like likes={smilePoint} />
+            <View views={totalPoint} />
           </div>
-          <div>{score}</div>
+          <div>{totalPoint}</div>
         </CardFooter>
       </Card>
     </Link>

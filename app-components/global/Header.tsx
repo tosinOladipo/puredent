@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-     <header className="w-full py-4">
+     <header className="w-full py-4 border-b border-gray-300">
         <Container className="flex justify-between items-center">
           <Link href="/"><Image src="/img/logo.svg" width={200} height={50} alt='Puredent'/></Link>
           <nav className='hidden md:flex'>

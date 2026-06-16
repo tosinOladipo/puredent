@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 type StageType = {
-   stage : "upload" | "caption" | "form" | "ai-reviw"
+   stage : "upload" | "caption" | "form" | "ai-review"
 };
 
 
   const initialState: StageType = {
-  stage : "caption"
+  stage : "upload"
 };
 
 
@@ -25,11 +25,15 @@ export const stageSlice = createSlice({
 
     formStage: (state) => {
       state.stage = "form"
+    },
+
+    aiStage: (state) => {
+      state.stage = "ai-review"
     }
 
   },
 });
 
-export const { uploadStage, captionStage, formStage } = stageSlice.actions;
+export const { uploadStage, captionStage, formStage, aiStage } = stageSlice.actions;
 
 export default stageSlice.reducer;
