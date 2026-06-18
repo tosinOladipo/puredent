@@ -19,3 +19,14 @@ export const entry = pgTable("entry", {
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().notNull(),
 });
+
+
+
+
+
+export const voteTable = pgTable("voteTable", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  username: varchar("username",{ length: 255 }).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
+});

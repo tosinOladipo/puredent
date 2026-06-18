@@ -1,4 +1,4 @@
-import { UserType } from "../types";
+import { UserType, VoterType } from "../types";
 
 
 export const userLocalStorage = (): UserType | undefined => {
@@ -11,3 +11,14 @@ export const userLocalStorage = (): UserType | undefined => {
   }
 };
 
+
+
+export const voterLocalStorage = (): VoterType | undefined => {
+  try {
+    const data = localStorage.getItem('voter');
+    if (data === null) return undefined;
+    return JSON.parse(data) as VoterType;
+  } catch (e) {
+    return undefined;
+  }
+};

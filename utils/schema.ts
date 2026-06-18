@@ -21,6 +21,21 @@ export type CreateAndEditUserType = z.infer<typeof createAndEditUserSchema>;
 
 
 
+export const createAndEditVoterSchema = z.object({
+  username: z.string().min(2, {
+    message: 'location must be at least 2 characters.',
+  }),
+
+  saveAt: z.string().min(6, {
+    message: 'password must be at least 6 characters.',
+  }),
+  
+});
+export type CreateAndEditVoterType = z.infer<typeof createAndEditVoterSchema>;
+
+
+
+
 
 export const createAndEditCaptionSchema = z.object({
   caption: z.string().min(0, {

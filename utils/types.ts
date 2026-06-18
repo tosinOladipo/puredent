@@ -6,6 +6,15 @@ export type UserType = {
 };
 
 
+export type VoterType = {
+  id?: string;
+  username: string;
+  createdAt?: Date,
+  updatedAt?: Date
+};
+
+
+
 export type EntryType = {
   id: string;
   image: string;
